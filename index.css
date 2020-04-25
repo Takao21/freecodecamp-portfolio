@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b2733;
+  color: #fff;
+  font-size: 85.5%;
+}
+
+.navContainer, .project-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navContainer {
+  font-family: sans-serif;
+  justify-content: flex-end;
+  background-color: #1a273d;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navLink {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 20px 35px;
+  font-size: 1.3em;
+}
+
+.navLink:hover {
+  background-color: #344b73;
+}
+
+#welcome-section {
+  margin-top: -65px;
+  height: 100vh;
+  background-image: linear-gradient(to top right, #228ba4, #a2b756);
+  z-index: -1;
+}
+
+#projects {
+  overflow: auto;
+}
+
+/* #projects > h3 {
+  margin: 5px;
+  font-family: monospace;
+  text-align: center;
+  font-size: 100%;
+} */
+
+.textContainer {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textContainer h1 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: Aldrich;
+  color: #fff;
+}
+
+.textContainer h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Amita;
+  color: #060647;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 12px 5px;
+  font-family: Amita;
+}
+
+p {
+  text-decoration: none;
+}
+
+.project-tile {
+  margin: auto;
+  justify-content: space-around;
+}
+
+.hoverEffect {
+  color: #12d5e3;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-out;
+}
+
+.project-tile > a {
+  text-align: center;
+  border: 1px solid #8895db;
+  text-decoration: none;
+  color: white;
+  padding: 0px;
+  margin: 25px 15px;
+  font-family: Aldrich;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.project-tile > a:hover .hoverEffect {
+  visibility: visible;
+  opacity: 1;
+  -webkit-filter: drop-shadow(2px 2px 6px #228ba4);
+          filter: drop-shadow(2px 2px 6px #228ba4);
+}
+
+.project-tile > a:hover {
+  box-shadow: 0px 3px 5px #228ba4, 0px -3px 5px #228ba4, 3px 0px 5px #228ba4, -3px 0px 5px #228ba4;
+  transition: 0.5s ease-out;
+}
+
+.imageDiv > img {
+  width: 370px;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#imageCaption {
+  margin: 12px 5px;
+}
+
+#contact, footer {
+  background-color: #627e94;
+}
+
+#contact {
+  height: 100vh;
+  position: relative;
+}
+
+.textContainer2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textContainer2 h1 {
+  font-size: 3em;
+  font-family: sans-serif;
+}
+
+blockquote {
+  font-family: cursive;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#profile-link {
+  line-height: 10em;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: fantasy;
+  letter-spacing: 1px;
+
+  position: relative;
+  -webkit-animation-name: Floaty;
+          animation-name: Floaty;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+@-webkit-keyframes Floaty {
+  from {top: 0;}
+  to {top: 1em;}
+}
+@keyframes Floaty {
+  from {top: 0;}
+  to {top: 1em;}
+}
+
+#profile-link:hover {
+  color: #7be35b;
+}
+
+@media only screen and (max-width: 500px) {
+  .navContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navLink {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .textContainer {
+    margin-top: 120px;
+  }
+
+  #welcome-section {
+    margin-top: -195px;
+  }
+
+  .imageDiv > img {
+    width: 300px;
+    height: 325px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 80%;
+  }
+  .imageDiv > img {
+    width: 280px;
+    height: 300px;
+  }
+
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid white;
+  font-family: sans-serif;
+  font-size: small;
+}
